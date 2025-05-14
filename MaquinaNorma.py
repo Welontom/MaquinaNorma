@@ -73,6 +73,6 @@ class MaquinaNorma:
 if __name__ == "__main__":
     maquina = MaquinaNorma()
     maquina.set_registradores({'A': 2, 'B': 3})  # Inicializando A=3, B=2, outros 0
-    maquina.carregar_programa('soma.txt')
+    maquina.carregar_programa('programas/soma.txt')
     maquina.executar()
     maquina.imprimir_registradores()
