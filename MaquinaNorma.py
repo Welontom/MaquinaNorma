@@ -24,7 +24,6 @@ class MaquinaNorma:
             if proxima_linha is None:
                 self.linha_atual += 1
             else:
-                # Procurar índice da linha com esse número
                 indices = [i for i, (num, _) in enumerate(self.programa) if num == proxima_linha]
                 if indices:
                     self.linha_atual = indices[0]
@@ -72,7 +71,7 @@ class MaquinaNorma:
 # Exemplo de uso
 if __name__ == "__main__":
     maquina = MaquinaNorma()
-    maquina.set_registradores({'A': 2, 'B': 3})  # Inicializando A=3, B=2, outros 0
+    maquina.set_registradores({'A': 2, 'B': 3})
     maquina.carregar_programa('programas/soma.txt')
     maquina.executar()
     maquina.imprimir_registradores()
