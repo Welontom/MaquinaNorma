@@ -39,6 +39,9 @@ class MaquinaNorma:
         goto = instrucao[4:6] 
         
         print(instrucao)
+        print("Estado atual dos registradores:")
+        for k, v in self.registradores.items():
+            print(f"{k}: {v}")
 
         if (comando not in {"ADD", "SUB", "ZER"} or reg not in self.registradores):
             print(f"Instrução inválida: {instrucao}")
@@ -71,7 +74,7 @@ class MaquinaNorma:
 # Exemplo de uso
 if __name__ == "__main__":
     maquina = MaquinaNorma()
-    maquina.set_registradores({'A': 2, 'B': 3})
-    maquina.carregar_programa('programas/soma.txt')
+    maquina.set_registradores({'A': 6, 'B':2})
+    maquina.carregar_programa('programas/mod.txt')
     maquina.executar()
     maquina.imprimir_registradores()
