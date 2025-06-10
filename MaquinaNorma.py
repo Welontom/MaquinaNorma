@@ -74,7 +74,7 @@ class MaquinaNorma:
 # Exemplo de uso
 if __name__ == "__main__":
     maquina = MaquinaNorma()
-    maquina.set_registradores({'A': 6, 'B':2})
-    maquina.carregar_programa('programas/mod.txt')
+    maquina.set_registradores({'A': 6})
+    maquina.carregar_programa('programas/primo.txt')
     maquina.executar()
     maquina.imprimir_registradores()
